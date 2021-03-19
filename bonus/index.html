@@ -15,7 +15,7 @@
 		<!-- <link rel="stylesheet" href="css/12bool.css"> -->
 		<link rel="stylesheet" href="css/master.css">
 		<!-- *** [ JQUERY - Google CDN ] *** -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 		<!-- *** [ VUE.JS ] *** -->
 		<!-- development -->
 		<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
@@ -43,13 +43,15 @@
 						v-model="msg1" > puntamento variabile msg1 in data
 						{{msg1}} > recupero valore msg1
 					-->
-					<h1 v-model="msg1">{{msg1}}</h1>
+					<!-- <h1 v-model="msg1">{{msg1}}</h1> -->
+					<!-- msg1 statico funziona anche senza v-model="msg1" -->
+					<h1>{{msg1}}</h1>
 	
 					<!-- 
 						v-bind:src > legame img src e vue data
 						src1 > recupero valore variabile per img src
 					-->
-					<img v-bind:src="src1" alt="vue family">
+					<img v-bind:src="src1" :class="img_class" alt="vue family">
 
 				</div>
 
